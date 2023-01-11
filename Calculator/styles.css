@@ -1,0 +1,43 @@
+body{
+  background-color: lightgrey;
+}
+
+.container {
+    max-width: 400px;
+    margin: 10px auto 0 auto;
+  color: black;
+  background-color: white;
+}
+
+#display {
+    text-align: right;
+    height: 70px;
+    padding: 16px 8px;
+    font-size: 25px;
+    background-color: white;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+
+.button {
+    border: 0.5px solid #999;
+    line-height: 100px;
+    text-align: center;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#equal {
+    background-color: orange;
+    color: white;
+}
+
+.button:hover {
+    background-color: black;
+    color: white;
+
+}
