@@ -1,0 +1,63 @@
+.mainBody{
+    
+    text-align: center;
+    justify-content: center;
+    
+    
+}
+.header{
+    display: block;
+    /* background-image: url("images/bgimg.jpeg"); */
+    
+}
+#container{
+    
+    margin: auto;
+    display: block;
+    transform-style:preserve-3d;
+    padding: 20px;
+
+    
+}
+
+#output{
+    padding: 10px;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+}
+.front{
+    position:absolute;
+    backface-visibility: hidden;
+}
+
+.back{
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+.cards{
+    margin-left: 5%;
+    position: relative;
+    transform-style:preserve-3d;
+    transition: transform 0.8s ease;
+    display: inline-block;
+    
+    
+}
+.cards:hover{
+    cursor: pointer;
+}
+
+.flipCards{
+    transform: rotateY(180deg);
+}
+
+#restart{
+    display: none;
+    margin: auto;
+    cursor: pointer;
+}
