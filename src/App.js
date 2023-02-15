@@ -1,43 +1,24 @@
-import Input from './Input';
+
 import './App.css';
-import Evaluation from './evaluate';
-import { useState } from 'react';
+import Form from './Components/Form';
+import Listt from './Components/listt';
+import ClassClick from './Components/ClassClick';
+import Counter from './Components/Counter';
+import FunctionClick from './Components/FunctionClick';
+import Greet from './Components/Greet';
+import ParentComp from './Components/ParentComp';
+import Welcome from './Components/Welcome';
+import LifeCycleA from './Components/LifeCycleA';
+import FragmentDemo from './Components/FragmentDemo';
+import Click from './Components/Click';
+import Hover from './Components/Hover';
+import PostList from './Components/PostList';
+import PostForm from './Components/PostForm';
 function App() {
-  const[result,setResult]=useState('')
-
-   const handleClick= (event)=>{
-    setResult(result+event.target.value)
-   }
-
-   const clearDisplay = ()=>{
-    setResult("")
-   }
-
-   const handleDelete=()=>{
-    setResult(result.slice(0,-1))
-   }
-
-   const evalDisplay=()=>{
-
-     const evalObj = new Evaluation()
-
-     const answer=evalObj.calculate(result)
-
-     setResult(answer)
-     
-   }
-
-   const valueArray=['C','DEL','.','/','9','8','7','*','6','5','4','+','3','2','1','-','(','0',')','=']
   return (
-    <div className='container'>
-    <input type='text' className='display' value={result}></input>
-   { valueArray.map((item)=>{
-      return (<Input type='button'  value={item} 
-    onClick={item=='C'?clearDisplay:item=='DEL'?handleDelete:item=='='?evalDisplay:handleClick }></Input>)
-    })}
-     
+    <div className="App">
+  <PostForm></PostForm>
     </div>
-
   );
 }
 
